@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   
-  const [??,??] = useState([]);
+  const [fotos, setFotos] = useState([]);
 
   useEffect(() => { 
 
     const buscarUsuario  = async () => {
-                    = await fetch('https://jsonplaceholder.typicode.com/photos');
-        const dados =                ;
+        const resposta = await fetch('https://jsonplaceholder.typicode.com/photos');
+        const dados = await reposta.json()           ;
         setFotos(dados);
     }
     buscarUsuario();
-  }, //complete o código);
+  }, []);
 
   return (
     <>
